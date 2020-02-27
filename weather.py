@@ -8,7 +8,7 @@ app = Flask(__name__)
 def home():
     if request.method == 'POST':
         city = request.form['city']
-        url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=f9217c96f6b17b9407ecb45285fd0009'
+        url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=APIkey'
         response = requests.get(url.format(city)).json()
 
         weather = {
